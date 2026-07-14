@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=4" />
 </head>
 <body>
 
@@ -84,7 +84,7 @@
     <section class="section" id="projekt">
       <div class="container">
         <div class="split">
-          <div class="split__media reveal">
+          <div class="split__media reveal zoom">
             <picture>
               <source srcset="assets/img/projekt.webp" type="image/webp" />
               <img src="assets/img/projekt.jpg" alt="Visualisierung der Witzighausen Residenz aus der Seitenperspektive — Holzfassade, Tiefgaragenzufahrt und begrünte Umgebung." loading="lazy" width="1500" height="863" />
@@ -106,10 +106,10 @@
     <section class="section--tight" id="kennzahlen" aria-label="Kennzahlen">
       <div class="container">
         <div class="kpis reveal">
-          <div class="kpi"><div class="kpi__num">22</div><div class="kpi__label">Wohneinheiten</div></div>
-          <div class="kpi"><div class="kpi__num">3</div><div class="kpi__label">Gewerbeeinheiten</div></div>
+          <div class="kpi"><div class="kpi__num" data-count="22">22</div><div class="kpi__label">Wohneinheiten</div></div>
+          <div class="kpi"><div class="kpi__num" data-count="3">3</div><div class="kpi__label">Gewerbeeinheiten</div></div>
           <div class="kpi"><div class="kpi__num">KfW 40</div><div class="kpi__label">Effizienzhaus-Standard</div></div>
-          <div class="kpi"><div class="kpi__num">43</div><div class="kpi__label">Stellplätze (32 TG · 11 oberirdisch)</div></div>
+          <div class="kpi"><div class="kpi__num" data-count="43">43</div><div class="kpi__label">Stellplätze (32 TG · 11 oberirdisch)</div></div>
         </div>
       </div>
     </section>
@@ -163,6 +163,25 @@
           <span class="eyebrow">Innenräume</span>
           <h2>Hochwertig ausgestattet — bis ins Detail.</h2>
           <p>Warme Holztöne, bodentiefe Fenster und durchdachte Grundrisse schaffen Wohnräume mit hoher Aufenthaltsqualität. Fußbodenheizung, dreifachverglaste Fenster und eine dezentrale Wohnraumlüftung sorgen für Komfort und Effizienz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERIE ============ -->
+    <section class="section--tight" id="galerie" aria-label="Impressionen">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Impressionen</span>
+          <hr class="rule" />
+          <h2>Ein Blick in die Residenz.</h2>
+        </div>
+        <div class="gallery">
+          <figure class="gtile gtile--a reveal"><picture><source srcset="assets/img/int-wohnen.webp" type="image/webp" /><img src="assets/img/int-wohnen.jpg" alt="Heller Wohn-Ess-Bereich mit Holzakzenten." loading="lazy" /></picture><figcaption class="gtile__cap">Wohnen &amp; Essen</figcaption></figure>
+          <figure class="gtile gtile--b reveal d1"><picture><source srcset="assets/img/int-kueche.webp" type="image/webp" /><img src="assets/img/int-kueche.jpg" alt="Moderne Küchenzeile mit Holzfronten." loading="lazy" /></picture><figcaption class="gtile__cap">Küche</figcaption></figure>
+          <figure class="gtile gtile--c reveal d2"><picture><source srcset="assets/img/int-schlafen.webp" type="image/webp" /><img src="assets/img/int-schlafen.jpg" alt="Schlafzimmer mit Ankleide." loading="lazy" /></picture><figcaption class="gtile__cap">Schlafen</figcaption></figure>
+          <figure class="gtile gtile--d reveal d1"><picture><source srcset="assets/img/int-bad.webp" type="image/webp" /><img src="assets/img/int-bad.jpg" alt="Badezimmer mit bodengleicher Dusche." loading="lazy" /></picture><figcaption class="gtile__cap">Bad</figcaption></figure>
+          <figure class="gtile gtile--e reveal d2"><picture><source srcset="assets/img/int-ankleide.webp" type="image/webp" /><img src="assets/img/int-ankleide.jpg" alt="Begehbare Ankleide mit Holzeinbauten." loading="lazy" /></picture><figcaption class="gtile__cap">Ankleide</figcaption></figure>
+          <figure class="gtile gtile--f reveal d3"><picture><source srcset="assets/img/pano.webp" type="image/webp" /><img src="assets/img/pano.jpg" alt="Außenansicht der Witzighausen Residenz." loading="lazy" /></picture><figcaption class="gtile__cap">Außenansicht</figcaption></figure>
         </div>
       </div>
     </section>
@@ -265,16 +284,21 @@
           <h2>Zwischen Natur und Metropolregion Ulm.</h2>
         </div>
         <div class="lage__grid" style="margin-top:clamp(1.4rem,3vw,2rem)">
-          <div class="map reveal">
-            <img src="assets/img/lage-karte.jpg" alt="Kartenausschnitt mit der Lage von Witzighausen zwischen Senden, Neu-Ulm und Ulm." loading="lazy" width="1600" height="900" />
+          <div class="lage__sticky">
+            <div class="map reveal zoom">
+              <img src="assets/img/lage-karte.jpg" alt="Kartenausschnitt mit der Lage von Witzighausen zwischen Senden, Neu-Ulm und Ulm." loading="lazy" width="1600" height="900" />
+            </div>
           </div>
           <div class="reveal d1">
-            <p>Witzighausen ist ein Stadtteil im westlichen Bereich der Stadt Senden, im Landkreis Neu-Ulm. Über die nahe Bundesstraße B28 ist der Ort sehr gut an das überregionale Verkehrsnetz angebunden — in nur rund 6 Kilometern erreicht man die Anschlussstelle zur Autobahn A7. Ulm ist über B28 oder A7 in etwa 15 Minuten Fahrzeit erreichbar; die renommierte Universität Ulm in ca. 19 Minuten.</p>
+            <p>Witzighausen ist ein Stadtteil im westlichen Bereich der Stadt Senden, im Landkreis Neu-Ulm, Schwaben. Über die nahe Bundesstraße B28 ist der Ort sehr gut an das überregionale Verkehrsnetz angebunden — in nur rund 6 Kilometern erreicht man die Anschlussstelle zur Autobahn A7.</p>
+            <p style="margin-top:1rem">Ulm, das nächste große städtische Zentrum, ist über B28 oder A7 in etwa 15 Minuten Fahrzeit erreichbar. Eine direkte Busverbindung bringt Sie in rund 15 Minuten zum Ulmer Hauptbahnhof; die nächste Bushaltestelle liegt direkt vor Ort.</p>
+            <p style="margin-top:1rem">Großes Potenzial bietet die Lage für die <span class="mark">studentische Vermietung</span>: Die renommierte Universität Ulm ist über die B28 in ca. 19 Minuten mit dem Auto sowie bequem mit öffentlichen Verkehrsmitteln erreichbar. Bildungseinrichtungen, ärztliche Versorgung und Supermärkte sind im benachbarten Senden in wenigen Minuten erreichbar.</p>
             <ul class="dist-list">
               <li><span class="place">Senden Stadtzentrum</span><span class="km">ca. 5 km</span></li>
               <li><span class="place">Ulm</span><span class="km">ca. 15 km</span></li>
               <li><span class="place">Neu-Ulm</span><span class="km">ca. 13 km</span></li>
               <li><span class="place">Autobahn A7 (AS Nersingen)</span><span class="km">ca. 6 km</span></li>
+              <li><span class="place">Universität Ulm</span><span class="km">ca. 19 min</span></li>
               <li><span class="place">Flughafen Memmingen</span><span class="km">ca. 45 km</span></li>
               <li><span class="place">Donauauen (Naherholung)</span><span class="km">ca. 3 km</span></li>
             </ul>
@@ -301,9 +325,9 @@
           <div class="feature reveal d2"><div class="feature__label">Lebenswert</div><h3>Infrastruktur</h3><p>Angenehme Wohnatmosphäre zwischen Natur und urbaner Infrastruktur.</p></div>
         </div>
         <div class="stats reveal">
-          <div class="stat"><div class="stat__num">15 <small>min</small></div><div class="stat__label">nach Ulm</div></div>
-          <div class="stat"><div class="stat__num">5 <small>min</small></div><div class="stat__label">Senden Zentrum</div></div>
-          <div class="stat"><div class="stat__num">3 <small>km</small></div><div class="stat__label">bis zu den Donauauen</div></div>
+          <div class="stat"><div class="stat__num"><span data-count="15">15</span> <small>min</small></div><div class="stat__label">nach Ulm</div></div>
+          <div class="stat"><div class="stat__num"><span data-count="5">5</span> <small>min</small></div><div class="stat__label">Senden Zentrum</div></div>
+          <div class="stat"><div class="stat__num"><span data-count="3">3</span> <small>km</small></div><div class="stat__label">bis zu den Donauauen</div></div>
         </div>
       </div>
     </section>
@@ -312,7 +336,7 @@
     <section class="section" id="investment">
       <div class="container">
         <div class="invest">
-          <div class="invest__media reveal">
+          <div class="invest__media reveal zoom">
             <picture><source srcset="assets/img/int-schlafen.webp" type="image/webp" /><img src="assets/img/int-schlafen.jpg" alt="Visualisierung eines Schlafzimmers mit Ankleide in der Witzighausen Residenz." loading="lazy" width="1200" height="685" /></picture>
           </div>
           <div class="invest__body reveal d1">
@@ -407,6 +431,6 @@
     ]
   }
   </script>
-  <script src="assets/js/app.js?v=3"></script>
+  <script src="assets/js/app.js?v=4"></script>
 </body>
 </html>
