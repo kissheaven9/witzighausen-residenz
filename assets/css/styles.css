@@ -258,8 +258,9 @@ p{max-width:68ch}
 
 /* ---------- Band (full-width photo) ---------- */
 .band{position:relative;color:#fff;overflow:hidden;background:var(--ink)}
-.band__media{position:absolute;inset:0}
-.band__media picture{display:block;width:100%;height:100%}
+.band__media{position:absolute;inset:0;overflow:hidden}
+/* Bild höher als der Block -> Parallax-Verschiebung beim Scrollen (kein Rand rechts durch -1px Überstand) */
+.band__media picture{display:block;position:absolute;top:-16%;left:-1px;right:-1px;height:132%;will-change:transform}
 .band__media img{width:100%;height:100%;object-fit:cover;display:block}
 .band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,18,15,.74),rgba(20,18,15,.32))}
 .band .container{position:relative;z-index:1;padding-block:clamp(72px,12vw,150px)}

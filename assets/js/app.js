@@ -104,4 +104,33 @@
       });
     });
   }
+
+  /* ---- Parallax: Band-Bild verschiebt sich sanft beim Scrollen ---- */
+  var bands = Array.prototype.slice.call(document.querySelectorAll('.band'));
+  var layers = bands.map(function (b) {
+    return { band: b, layer: b.querySelector('.band__media picture') };
+  }).filter(function (o) { return o.layer; });
+
+  if (layers.length && !reduce) {
+    var ticking = false;
+    function updateParallax() {
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      layers.forEach(function (o) {
+        var r = o.band.getBoundingClientRect();
+        if (r.bottom < -50 || r.top > vh + 50) return; // außer Sicht -> überspringen
+        // p: 0 (Band tritt unten ein) .. 1 (Band verlässt oben)
+        var p = (vh - r.top) / (vh + r.height);
+        var max = r.height * 0.12;             // innerhalb des 16%-Überstands
+        var shift = (p - 0.5) * 2 * max;       // -max .. +max
+        o.layer.style.transform = 'translate3d(0,' + shift.toFixed(1) + 'px,0)';
+      });
+      ticking = false;
+    }
+    function onScrollParallax() {
+      if (!ticking) { ticking = true; requestAnimationFrame(updateParallax); }
+    }
+    window.addEventListener('scroll', onScrollParallax, { passive: true });
+    window.addEventListener('resize', onScrollParallax, { passive: true });
+    updateParallax();
+  }
 })();
