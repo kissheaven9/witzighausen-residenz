@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=6" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=7" />
 </head>
 <body>
 
@@ -52,7 +52,13 @@
   <main id="top">
 
     <!-- ============ HERO ============ -->
-    <section class="hero" id="hero">
+    <section class="hero hero--bleed" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <picture>
+          <source srcset="assets/img/hero-bg.webp" type="image/webp" />
+          <img src="assets/img/hero-bg.jpg" alt="" fetchpriority="high" width="2490" height="1257" />
+        </picture>
+      </div>
       <div class="container">
         <div class="hero__grid">
           <div class="hero__body">
@@ -69,12 +75,6 @@
               <span class="chip"><b>KfW 40</b> Effizienzhaus</span>
             </div>
           </div>
-          <figure class="hero__figure">
-            <picture>
-              <source srcset="assets/img/hero.webp" type="image/webp" />
-              <img src="assets/img/hero.jpg" alt="Visualisierung der Witzighausen Residenz — modernes Neubau-Ensemble mit vertikaler Holzlattung und Café im Erdgeschoss in der Abendsonne." fetchpriority="high" width="1600" height="961" />
-            </picture>
-          </figure>
         </div>
       </div>
     </section>
