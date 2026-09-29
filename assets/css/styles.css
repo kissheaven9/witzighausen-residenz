@@ -141,7 +141,7 @@ p{max-width:68ch}
 /* ---------- Hero ---------- */
 .hero{position:relative;padding-block:clamp(48px,7vw,90px) 0}
 .hero--bleed{overflow:hidden;display:flex;flex-direction:column}
-.hero__bg{position:relative;order:2;margin-top:clamp(1.6rem,4vw,2.4rem);pointer-events:none}
+.hero__bg{display:none;pointer-events:none}
 .hero__bg img{width:100%;height:auto}
 .hero__bg::after{
   content:"";position:absolute;inset:0;
@@ -168,7 +168,7 @@ p{max-width:68ch}
 .chip b{color:var(--ink);font-weight:500}
 @media (min-width:920px){
   .hero--bleed{flex-direction:row;align-items:center;min-height:clamp(560px,80vh,820px);padding-block:clamp(48px,7vw,90px)}
-  .hero__bg{position:absolute;inset:0;order:0;margin:0;z-index:0}
+  .hero__bg{display:block;position:absolute;inset:0;margin:0;z-index:0}
   .hero__bg picture{height:100%}
   .hero__bg img{height:100%;object-fit:cover;object-position:right center}
   .hero__bg::after{
